@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CALCULADORA IMC</h1>
+
+        <div class="genero">
+            <label>
+                <input type="radio" name="genero" value="feminino">
+                <img src="/img/103277.png" alt="Mulher">
+            </label>
+
+            <label>
+                <input type="radio" name="genero" value="masculino">
+                <img src="/img/3439472.png" alt="Homem">
+            </label>
+        </div>
+
+        <div class="input-section">
+            <div class="input-box">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" placeholder="Ex: 70">
+            </div>
+            <div class="input-box">
+                <label for="altura">Altura (cm)</label>
+                <input type="number" id="altura" placeholder="Ex: 170">
+            </div>
+        </div>
+
+        <button onclick="calcularIMC()">CALCULAR</button>
+
+        <table>
+            <tr>
+                <th>IMC</th>
+                <th>Classificação</th>
+                <th>Obesidade (Grau)</th>
+            </tr>
+            <tr>
+                <td>Menor que 18,5</td>
+                <td>Magreza</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>18,5 - 24,9</td>
+                <td>Normal</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>25,0 - 29,9</td>
+                <td>Sobrepeso</td>
+                <td>I</td>
+            </tr>
+            <tr>
+                <td>30,0 - 39,9</td>
+                <td>Obesidade</td>
+                <td>II</td>
+            </tr>
+            <tr>
+                <td>Maior que 40,0</td>
+                <td>Obesidade Grave</td>
+                <td>III</td>
+            </tr>
+        </table>
+
+        <div class="resultado">
+            <h2>SEU IMC:</h2>
+            <p id="imc-valor">--</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
